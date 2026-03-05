@@ -1,83 +1,179 @@
 .cta {
     position: relative;
     overflow: hidden;
-    text-align: center;
+    padding: 100px 0;
 }
 
 .cta__blob {
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.3;
+    opacity: 0.2;
     pointer-events: none;
+    z-index: 0;
 }
 
 .cta__blob--1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.5) 0%, transparent 70%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
     top: -200px;
     left: -100px;
 }
 
 .cta__blob--2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
     bottom: -150px;
     right: -100px;
 }
 
-.cta__inner {
+.cta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+}
+
+.cta__info {
+    text-align: left;
 }
 
 .cta__title {
-    text-align: center;
-    max-width: 700px;
+    margin-bottom: 24px;
+    text-align: left;
 }
 
 .cta__subtitle {
-    text-align: center;
-    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 500px;
+}
+
+.cta__apps-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta__buttons {
     display: flex;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 8px;
 }
 
 .cta__store-btn {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-.cta__store-btn.btn-primary {
-    opacity: 0.8;
-}
-
-.cta__link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    padding: 12px 24px;
     font-size: 14px;
-    color: var(--text-secondary);
-    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
-    padding: 8px 16px;
-    border-radius: 8px;
+}
+
+.cta__store-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Form Styles */
+.cta__form-container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.cta__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form__input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: var(--text-primary);
+    font-size: 15px;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form__input:focus {
+    border-color: var(--accent-purple);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.cta__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    font-weight: 600;
     margin-top: 8px;
 }
 
-.cta__link:hover {
-    color: var(--accent-purple-light);
-    background: rgba(124, 58, 237, 0.08);
+/* Responsive */
+@media (max-width: 992px) {
+    .cta__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+
+    .cta__info,
+    .cta__title,
+    .cta__subtitle {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta__buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta__form-container {
+        padding: 24px;
+    }
+
+    .cta {
+        padding: 60px 0;
+    }
 }

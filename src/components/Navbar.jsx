@@ -10,6 +10,7 @@ const navLinks = [
     { label: 'Teams', to: 'project-teams' },
     { label: 'Tech Stack', to: 'tech-stack' },
     { label: 'Roles', to: 'roles' },
+    { label: 'Contact', to: 'contact' },
 ];
 
 export default function Navbar() {
