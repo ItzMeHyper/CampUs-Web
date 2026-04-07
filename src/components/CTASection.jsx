@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { RiGooglePlayLine, RiAppleLine, RiSendPlaneLine, RiMailLine, RiUserLine, RiMessage2Line } from 'react-icons/ri';
+import { RiGooglePlayLine, RiAppleLine, RiSendPlaneLine, RiMailLine, RiUserLine, RiMessage2Line, RiAndroidLine } from 'react-icons/ri';
 import './CTASection.css';
 
 export default function CTASection() {
@@ -29,15 +29,15 @@ export default function CTASection() {
                         </p>
 
                         <div className="cta__apps">
-                            <p className="cta__apps-label">Coming soon to</p>
+                            <p className="cta__apps-label">Download for Android</p>
                             <div className="cta__buttons">
-                                <button className="btn btn-secondary cta__store-btn" disabled>
-                                    <RiGooglePlayLine size={20} />
-                                    Play Store
-                                </button>
+                                <a href="/previews/CampUs.apk" download="CampUs.apk" className="btn btn-secondary cta__store-btn" style={{ textDecoration: 'none' }}>
+                                    <RiAndroidLine size={20} />
+                                    Download APK
+                                </a>
                                 <button className="btn btn-secondary cta__store-btn" disabled>
                                     <RiAppleLine size={20} />
-                                    App Store
+                                    App Store (Soon)
                                 </button>
                             </div>
                         </div>

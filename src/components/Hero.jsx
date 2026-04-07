@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { RiArrowDownLine, RiGithubLine, RiPlayCircleLine } from 'react-icons/ri';
+import { RiArrowDownLine, RiAndroidLine, RiPlayCircleLine } from 'react-icons/ri';
 import './Hero.css';
 
 const words = ['Academic', 'World,', 'Unified.'];
@@ -77,14 +77,28 @@ export default function Hero() {
                             </button>
                         </Link>
                         <a
-                            href="https://github.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/previews/CampUs.apk"
+                            download="CampUs.apk"
                             className="btn btn-secondary"
                         >
-                            <RiGithubLine size={18} />
-                            View on GitHub
+                            <RiAndroidLine size={18} />
+                            Download APK
                         </a>
+                    </motion.div>
+
+                    {/* Demo Credentials */}
+                    <motion.div
+                        className="hero__demo-creds"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 1.0 }}
+                        style={{ marginTop: '1.5rem', fontSize: '14px', color: 'var(--text-secondary)', background: 'rgba(255, 255, 255, 0.05)', padding: '12px 24px', borderRadius: '12px', display: 'inline-block', border: '1px solid var(--border)' }}
+                    >
+                        <p style={{ margin: 0 }}>
+                            <span style={{ color: 'var(--accent-cyan)' }}>Demo Login:</span> student@sjcetpalai.ac.in 
+                            <span style={{ margin: '0 12px', color: 'var(--accent-purple)' }}>|</span> 
+                            <span style={{ color: 'var(--accent-pink)' }}>Password:</span> 123456
+                        </p>
                     </motion.div>
 
                     {/* Stats row */}
