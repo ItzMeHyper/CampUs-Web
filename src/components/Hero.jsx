@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
-import { RiArrowDownLine, RiAndroidLine, RiPlayCircleLine } from 'react-icons/ri';
+import { RiArrowDownLine, RiGithubLine, RiPlayCircleLine, RiSmartphoneLine } from 'react-icons/ri';
 import './Hero.css';
 
 const words = ['Academic', 'World,', 'Unified.'];
@@ -77,28 +77,34 @@ export default function Hero() {
                             </button>
                         </Link>
                         <a
-                            href="/previews/CampUs.apk"
-                            download="CampUs.apk"
+                            href="https://expo.dev/accounts/sree444/projects/CampUs/builds/26d115fe-4c17-460e-b904-a04e6149781d"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn btn-secondary"
                         >
-                            <RiAndroidLine size={18} />
+                            <RiSmartphoneLine size={18} />
                             Download APK
                         </a>
                     </motion.div>
 
-                    {/* Demo Credentials */}
+                    {/* Demo Credentials Alert */}
                     <motion.div
-                        className="hero__demo-creds"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1.0 }}
-                        style={{ marginTop: '1.5rem', fontSize: '14px', color: 'var(--text-secondary)', background: 'rgba(255, 255, 255, 0.05)', padding: '12px 24px', borderRadius: '12px', display: 'inline-block', border: '1px solid var(--border)' }}
+                        style={{ 
+                            marginTop: '20px', 
+                            padding: '12px 16px', 
+                            background: 'rgba(6, 182, 212, 0.08)', 
+                            border: '1px solid rgba(6, 182, 212, 0.2)', 
+                            borderRadius: '12px', 
+                            display: 'inline-block',
+                            textAlign: 'left',
+                            fontSize: '14px'
+                        }}
                     >
-                        <p style={{ margin: 0 }}>
-                            <span style={{ color: 'var(--accent-cyan)' }}>Demo Login:</span> student@sjcetpalai.ac.in 
-                            <span style={{ margin: '0 12px', color: 'var(--accent-purple)' }}>|</span> 
-                            <span style={{ color: 'var(--accent-pink)' }}>Password:</span> 123456
-                        </p>
+                        <strong style={{ color: 'var(--text-primary)' }}>Testing the App? Demo Login:</strong><br />
+                        <span style={{ color: 'var(--text-secondary)' }}>Email: <span style={{ color: 'var(--accent-cyan-light)', fontWeight: '500' }}>student@sjcetpalai.ac.in</span> &nbsp;|&nbsp; Pass: <span style={{ color: 'var(--accent-cyan-light)', fontWeight: '500' }}>123456</span></span>
                     </motion.div>
 
                     {/* Stats row */}

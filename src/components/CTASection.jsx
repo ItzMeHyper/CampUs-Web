@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { RiGooglePlayLine, RiAppleLine, RiSendPlaneLine, RiMailLine, RiUserLine, RiMessage2Line, RiAndroidLine } from 'react-icons/ri';
+import { RiGooglePlayLine, RiAppleLine, RiSendPlaneLine, RiMailLine, RiUserLine, RiMessage2Line } from 'react-icons/ri';
 import './CTASection.css';
 
 export default function CTASection() {
@@ -29,16 +29,28 @@ export default function CTASection() {
                         </p>
 
                         <div className="cta__apps">
-                            <p className="cta__apps-label">Download for Android</p>
-                            <div className="cta__buttons">
-                                <a href="/previews/CampUs.apk" download="CampUs.apk" className="btn btn-secondary cta__store-btn" style={{ textDecoration: 'none' }}>
-                                    <RiAndroidLine size={20} />
+                            <p className="cta__apps-label">Test the Android Beta</p>
+                            <div className="cta__buttons" style={{ flexDirection: 'column', gap: '16px', alignItems: 'flex-start' }}>
+                                <a 
+                                    href="https://expo.dev/accounts/sree444/projects/CampUs/builds/26d115fe-4c17-460e-b904-a04e6149781d" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="btn btn-primary cta__store-btn"
+                                    style={{ textDecoration: 'none' }}
+                                >
+                                    <RiGooglePlayLine size={20} />
                                     Download APK
                                 </a>
-                                <button className="btn btn-secondary cta__store-btn" disabled>
-                                    <RiAppleLine size={20} />
-                                    App Store (Soon)
-                                </button>
+                                
+                                <div className="glass-card" style={{ padding: '16px', borderRadius: '12px', width: '100%', border: '1px solid rgba(124, 58, 237, 0.3)' }}>
+                                    <span style={{ display: 'block', marginBottom: '8px', fontWeight: '600', color: 'var(--text-primary)' }}>
+                                        Demo Login Details
+                                    </span>
+                                    <div style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
+                                        Email: <strong style={{ color: 'var(--accent-cyan-light)' }}>student@sjcetpalai.ac.in</strong><br/>
+                                        Password: <strong style={{ color: 'var(--accent-cyan-light)' }}>123456</strong>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
