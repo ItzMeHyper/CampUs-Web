@@ -95,7 +95,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 1.1 }}
                     >
                         {[
-                            { value: '6', label: 'User Roles' },
+                            { value: '4', label: 'User Roles' },
                             { value: '10+', label: 'Core Features' },
                             { value: 'AI', label: 'Powered Matching' },
                             { value: '100%', label: 'Academic Focused' },

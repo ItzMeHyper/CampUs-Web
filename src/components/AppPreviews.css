@@ -1,0 +1,103 @@
+/* src/components/AppPreviews.css */
+.app-previews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px; /* Extra padding for scrollbar */
+}
+
+.previews-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.previews-scroll-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+  padding: 1rem 0 3rem 0;
+  /* Hide scrollbar for a cleaner look */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-purple) transparent;
+  cursor: grab;
+}
+
+.previews-scroll-container:active {
+  cursor: grabbing;
+}
+
+.previews-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.previews-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.previews-scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, var(--accent-purple-light), var(--accent-cyan));
+  border-radius: 10px;
+}
+
+.previews-track {
+  display: flex;
+  gap: 24px;
+  padding: 0 calc(50vw - 140px); /* Centers the first card initially */
+  scroll-snap-type: x mandatory;
+}
+
+.preview-card {
+  flex: 0 0 auto;
+  width: 260px; /* Mobile aspect ratio */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  scroll-snap-align: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.preview-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 30px 60px var(--glow-purple);
+  border-color: var(--border-hover);
+  z-index: 2;
+}
+
+.preview-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Subtle background glow behind the carousel */
+.app-previews::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(circle, var(--glow-cyan) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .preview-card {
+    width: 220px;
+  }
+  .previews-track {
+    gap: 16px;
+    padding: 0 24px; /* Default margin on mobile */
+  }
+}

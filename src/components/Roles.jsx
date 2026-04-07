@@ -1,17 +1,15 @@
 import { motion } from 'framer-motion';
 import {
-    RiUserLine, RiUserStarLine, RiGroupLine, RiUserHeartLine,
-    RiTeamLine, RiShieldLine
+    RiUserLine, RiUserStarLine, RiUserHeartLine,
+    RiTeamLine
 } from 'react-icons/ri';
 import './Roles.css';
 
 const roles = [
     { icon: <RiUserLine size={24} />, title: 'Student', desc: 'Core members with academic profiles, skills, and project interests.', color: 'cyan', badge: 'Core' },
     { icon: <RiUserStarLine size={24} />, title: 'Coordinator', desc: 'Club leads who create events, manage members, and post announcements.', color: 'purple', badge: 'Leader' },
-    { icon: <RiGroupLine size={24} />, title: 'Volunteer', desc: 'Active contributors supporting events, teams, and coordination.', color: 'pink', badge: 'Active' },
     { icon: <RiUserHeartLine size={24} />, title: 'Alumni', desc: 'Senior mentors who guide current students through career and academics.', color: 'cyan', badge: 'Mentor' },
     { icon: <RiTeamLine size={24} />, title: 'Faculty', desc: 'Academic supervisors who moderate content and oversee team projects.', color: 'purple', badge: 'Supervisor' },
-    { icon: <RiShieldLine size={24} />, title: 'Admin', desc: 'Platform administrators managing users, roles, and institutional settings.', color: 'pink', badge: 'Admin' },
 ];
 
 export default function Roles() {
@@ -30,7 +28,7 @@ export default function Roles() {
                         Built for every <span className="gradient-text">stakeholder</span>
                     </h2>
                     <p className="section-subtitle">
-                        Six distinct roles, each with tailored permissions and a unique experience inside CampUs.
+                        Four distinct roles, each with tailored permissions and a unique experience inside CampUs.
                     </p>
                 </motion.div>
 

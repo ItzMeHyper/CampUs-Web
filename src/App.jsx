@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import Features from './components/Features';
+import AppPreviews from './components/AppPreviews';
 import FeatureHighlight from './components/FeatureHighlight';
 import ProjectTeams from './components/ProjectTeams';
 import AISection from './components/AISection';
@@ -30,6 +31,11 @@ export default function App() {
 
                 {/* Features Overview Grid */}
                 <Features />
+
+                <div className="divider" />
+
+                {/* App Previews Gallery */}
+                <AppPreviews />
 
                 <div className="divider" />
 

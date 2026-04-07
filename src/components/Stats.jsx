@@ -54,7 +54,7 @@ export default function Stats() {
     return (
         <section className="stats section">
             <div className="container stats__inner">
-                <StatItem value="6" suffix="+" label="User Roles" color="#A78BFA" delay={0} />
+                <StatItem value="4" suffix="+" label="User Roles" color="#A78BFA" delay={0} />
                 <StatItem value="10" suffix="+" label="Core Features" color="#67E8F9" delay={0.1} />
                 <StatItem value="4" suffix="" label="AI Capabilities" color="#F9A8D4" delay={0.2} />
                 <StatItem value="100" suffix="%" label="Academic Focused" color="#A78BFA" delay={0.3} />

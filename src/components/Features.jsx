@@ -10,7 +10,7 @@ const features = [
     {
         icon: <RiShieldUserLine size={26} />,
         title: 'Auth & Roles',
-        desc: 'Email, Google SSO, and 6 role types — Student, Coordinator, Volunteer, Alumni, Faculty, Admin.',
+        desc: 'Email, Google SSO, and 4 role types — Student, Coordinator, Alumni, Faculty.',
         color: 'purple',
     },
     {
