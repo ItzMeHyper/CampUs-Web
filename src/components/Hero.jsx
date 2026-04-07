@@ -77,7 +77,7 @@ export default function Hero() {
                             </button>
                         </Link>
                         <a
-                            href="https://expo.dev/accounts/sree444/projects/CampUs/builds/26d115fe-4c17-460e-b904-a04e6149781d"
+                            href="https://expo.dev/accounts/sree444/projects/CampUs/builds/30da89e9-c44b-4e24-a87a-616a95dc62b1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-secondary"
